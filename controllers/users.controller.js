@@ -7,9 +7,6 @@ exports.createUser = async (req, res) => {
   const repair = await User.create({
     name,
     password,
-    amount: 1000,
-    accountNumber: Math.floor(Math.random() * 90000000) + 10000000,
-    status: "available",
   });
 
   return res.json({

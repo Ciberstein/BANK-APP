@@ -14,6 +14,7 @@ const User = db.define("Users", {
   },
   accountNumber: {
     type: DataTypes.INTEGER,
+    defaultValue: Math.floor(Math.random() * 90000000) + 10000000,
     allowNull: false,
   },
   password: {
@@ -22,6 +23,7 @@ const User = db.define("Users", {
   },
   amount: {
     type: DataTypes.FLOAT,
+    defaultValue: 1000,
     allowNull: false,
   },
   status: {
